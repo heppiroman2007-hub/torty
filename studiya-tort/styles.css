@@ -11,6 +11,12 @@
   --lime:#b6e21f; --lime-d:#93c20c; --ink:#2a1236; --muted:#6f5a7b; --cream:#fff8f1;
   --head:"Comfortaa","Trebuchet MS",sans-serif; --body:"Montserrat","Segoe UI",Arial,sans-serif;
   --r:28px;
+  color-scheme:only light;
+}
+/* Сайт всегда светлый: явный блок для тёмной темы телефона, чтобы браузер не затемнял страницу сам. */
+@media (prefers-color-scheme:dark){
+  :root{color-scheme:only light}
+  html,body{background:#fff;color:var(--ink)}
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
